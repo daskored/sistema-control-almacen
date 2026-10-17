@@ -70,7 +70,7 @@ class ServicioMovimientos:
 
 def create_app(test_config=None):
     
-    def validar_nombre_producto(nombre):
+def validar_nombre_producto(nombre):
     return isinstance(nombre, str) and bool(nombre.strip())
     
     app = Flask(__name__)
