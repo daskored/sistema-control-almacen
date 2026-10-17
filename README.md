@@ -44,3 +44,17 @@ Las pruebas cubren reglas de stock, movimientos, login y permisos. La cobertura 
 
 ## Limitaciones actuales
 Primera versión académica. Antes de utilizar en un almacén real se requiere endurecer seguridad (CSRF, control de sesiones, rate limiting), manejo robusto de concurrencia y operaciones administrativas de corrección/auditoría. No se recomienda usar con datos reales sensibles.
+
+## Validación del sistema
+
+El sistema fue validado mediante pruebas automatizadas
+con Pytest y GitHub Actions.
+
+Resultados obtenidos:
+- 11 pruebas aprobadas.
+- 83 % de cobertura de app.py.
+- Despliegue funcional en Render.
+
+También se realizaron pruebas manuales de inicio de
+sesión, registro de productos, entradas, salidas,
+control de existencias e historial de movimientos.
