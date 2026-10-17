@@ -68,11 +68,11 @@ class ServicioMovimientos:
         return mov
 
 
-def create_app(test_config=None):
-    
 def validar_nombre_producto(nombre):
     return isinstance(nombre, str) and bool(nombre.strip())
-    
+
+
+def create_app(test_config=None):
     app = Flask(__name__)
     db_url = os.environ.get('DATABASE_URL', 'sqlite:///almacen.db')
     if db_url.startswith('postgres://'):
