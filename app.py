@@ -68,6 +68,12 @@ class ServicioMovimientos:
         return mov
 
 
+def validar_nombre_producto(nombre):
+    if not isinstance(nombre, str):
+        return False
+    return bool(nombre.strip())
+
+
 def create_app(test_config=None):
     app = Flask(__name__)
     db_url = os.environ.get('DATABASE_URL', 'sqlite:///almacen.db')
