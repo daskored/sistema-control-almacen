@@ -69,7 +69,9 @@ class ServicioMovimientos:
 
 
 def validar_nombre_producto(nombre):
-    return isinstance(nombre, str) and bool(nombre.strip())
+    if not isinstance(nombre, str):
+        return False
+    return bool(nombre.strip())
 
 
 def create_app(test_config=None):
